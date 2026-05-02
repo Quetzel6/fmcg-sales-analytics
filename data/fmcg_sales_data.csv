@@ -1,0 +1,11 @@
+order_id,date,region,product_category,product_name,unit_price,quantity,promotion,customer_type
+1001,2025-01-05,Bangkok,Coffee,Instant Coffee,120,3,Yes,Returning
+1002,2025-01-07,Chiang Mai,Beverage,Chocolate Drink,45,5,No,New
+1003,2025-01-10,Bangkok,Dairy,UHT Milk,35,10,Yes,Returning
+1004,2025-01-15,Khon Kaen,Coffee,Instant Coffee,120,2,No,New
+1005,2025-02-02,Bangkok,Snack,Cereal Bar,25,12,Yes,Returning
+1006,2025-02-08,Phuket,Beverage,Chocolate Drink,45,6,Yes,New
+1007,2025-02-14,Chiang Mai,Dairy,UHT Milk,35,8,No,Returning
+1008,2025-03-01,Bangkok,Coffee,Premium Coffee,180,4,Yes,Returning
+1009,2025-03-05,Khon Kaen,Snack,Cereal Bar,25,15,No,New
+1010,2025-03-12,Phuket,Dairy,UHT Milk,35,7,Yes,Returning
