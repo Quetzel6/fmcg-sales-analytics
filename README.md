@@ -5,6 +5,21 @@ This project analyzes FMCG sales data to identify product performance,
 regional trends, and the impact of promotions. The goal is to transform 
 raw sales data into actionable business insights.
 
+## Project Structure
+fmcg-sales-analytics/
+│
+├── data/ # raw dataset
+├── notebooks/ # analysis code
+├── dashboard/ # charts
+├── reports/ # business report
+└── README.md
+
+## How to Run
+
+```bash
+pip install pandas matplotlib
+python notebooks/sales_analysis.py
+
 ## Dataset
 The dataset contains sales transactions including:
 - Product category and product name
