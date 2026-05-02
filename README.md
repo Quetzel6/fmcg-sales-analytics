@@ -67,3 +67,13 @@ demand.
 This project demonstrates how data analysis can be used to support 
 business decision-making in FMCG industries.
 
+## Dashboard Preview
+
+### Revenue by Product
+![Revenue by Product](dashboard/revenue_by_product.png)
+
+### Revenue by Region
+![Revenue by Region](dashboard/revenue_by_region.png)
+
+### Revenue by Month
+![Revenue by Month](dashboard/revenue_by_month.png)
