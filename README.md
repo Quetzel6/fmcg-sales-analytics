@@ -19,7 +19,6 @@ fmcg-sales-analytics/
 pip install pandas matplotlib
 python notebooks/sales_analysis.py
 
-
 ## Dataset
 The dataset contains sales transactions including:
 - Product category and product name
