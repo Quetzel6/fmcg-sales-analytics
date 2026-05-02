@@ -1,32 +1,75 @@
+import os
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/fmcg_sales_data.csv")
 
 df["revenue"] = df["unit_price"] * df["quantity"]
 df["date"] = pd.to_datetime(df["date"])
-df["month"] = df["date"].dt.to_period("M")
+df["month"] = df["date"].dt.to_period("M").astype(str)
+
+os.makedirs("dashboard", exist_ok=True)
 
 print("=== FMCG Sales Analytics ===")
 
+total_revenue = df["revenue"].sum()
 print("\nTotal Revenue:")
-print(df["revenue"].sum())
+print(total_revenue)
 
+product_revenue = df.groupby("product_name")["revenue"].sum().sort_values(ascending=False)
 print("\nRevenue by Product:")
-print(df.groupby("product_name")["revenue"].sum().sort_values(ascending=False))
+print(product_revenue)
 
+region_revenue = df.groupby("region")["revenue"].sum().sort_values(ascending=False)
 print("\nRevenue by Region:")
-print(df.groupby("region")["revenue"].sum().sort_values(ascending=False))
+print(region_revenue)
 
+monthly_revenue = df.groupby("month")["revenue"].sum()
 print("\nRevenue by Month:")
-print(df.groupby("month")["revenue"].sum())
+print(monthly_revenue)
 
+promotion_revenue = df.groupby("promotion")["revenue"].sum()
 print("\nRevenue by Promotion:")
-print(df.groupby("promotion")["revenue"].sum())
+print(promotion_revenue)
 
-top_product = df.groupby("product_name")["revenue"].sum().idxmax()
-top_region = df.groupby("region")["revenue"].sum().idxmax()
+# Chart 1: Revenue by Product
+plt.figure(figsize=(8, 5))
+product_revenue.plot(kind="bar")
+plt.title("Revenue by Product")
+plt.xlabel("Product")
+plt.ylabel("Revenue")
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.savefig("dashboard/revenue_by_product.png")
+plt.close()
+
+# Chart 2: Revenue by Region
+plt.figure(figsize=(8, 5))
+region_revenue.plot(kind="bar")
+plt.title("Revenue by Region")
+plt.xlabel("Region")
+plt.ylabel("Revenue")
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.savefig("dashboard/revenue_by_region.png")
+plt.close()
+
+# Chart 3: Revenue by Month
+plt.figure(figsize=(8, 5))
+monthly_revenue.plot(kind="line", marker="o")
+plt.title("Revenue by Month")
+plt.xlabel("Month")
+plt.ylabel("Revenue")
+plt.tight_layout()
+plt.savefig("dashboard/revenue_by_month.png")
+plt.close()
+
+top_product = product_revenue.idxmax()
+top_region = region_revenue.idxmax()
 
 print("\nBusiness Insights:")
 print(f"1. The top-performing product is {top_product}.")
 print(f"2. The best-performing region is {top_region}.")
 print("3. Promotion impact should be analyzed further to improve campaign strategy.")
+
+print("\nCharts saved to dashboard folder.")
