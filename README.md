@@ -92,3 +92,24 @@ business decision-making in FMCG industries.
 
 ### Revenue by Month
 ![Revenue by Month](dashboard/revenue_by_month.png)
+
+## Customer Segmentation (RFM Analysis)
+
+This project also includes customer segmentation using RFM (Recency, 
+Frequency, Monetary) analysis.
+
+### Key Findings
+
+- **VIP Customers** generate the highest revenue and have recent 
+purchases. These customers should be prioritized for retention strategies.
+- **Loyal Customers** are still active and should be encouraged with 
+loyalty programs.
+- **At Risk Customers** have not purchased recently and may churn if not 
+re-engaged.
+
+### Business Recommendations
+
+- Provide exclusive promotions or rewards for VIP customers.
+- Create loyalty campaigns to retain active customers.
+- Launch re-engagement campaigns (discounts, reminders) for at-risk 
+customers.
