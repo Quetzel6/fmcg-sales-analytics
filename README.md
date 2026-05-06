@@ -15,7 +15,6 @@ fmcg-sales-analytics/
 └── README.md
 
 ## How to Run
-
 ```bash
 pip install pandas matplotlib
 python notebooks/sales_analysis.py
