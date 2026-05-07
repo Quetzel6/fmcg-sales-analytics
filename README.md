@@ -112,3 +112,21 @@ re-engaged.
 - Create loyalty campaigns to retain active customers.
 - Launch re-engagement campaigns (discounts, reminders) for at-risk 
 customers.
+
+## Mini Data Pipeline Project
+
+This project includes a mini data pipeline designed to simulate a 
+real-world data workflow.
+
+### Pipeline Flow
+
+```text
+CSV Data Source
+      ↓
+Python Extract
+      ↓
+Data Transformation
+      ↓
+SQLite Database
+      ↓
+Summary Report
