@@ -5,6 +5,12 @@ This project analyzes FMCG sales data to identify product performance,
 regional trends, and the impact of promotions. The goal is to transform 
 raw sales data into actionable business insights.
 
+## Tools Used
+- Python
+- Pandas  
+- SQL (concept)
+- Data Analysis
+
 ## Project Structure
 fmcg-sales-analytics/
 │
@@ -14,11 +20,6 @@ fmcg-sales-analytics/
 ├── reports/ # business report
 └── README.md
 
-## How to Run
-```bash
-pip install pandas matplotlib
-python notebooks/sales_analysis.py
-
 ## Dataset
 The dataset contains sales transactions including:
 - Product category and product name
@@ -26,12 +27,6 @@ The dataset contains sales transactions including:
 - Unit price and quantity
 - Promotion status
 - Customer type
-
-## Tools Used
-- Python
-- Pandas
-- SQL (concept)
-- Data Analysis
 
 ## Key Analysis
 
@@ -113,9 +108,31 @@ re-engaged.
 - Launch re-engagement campaigns (discounts, reminders) for at-risk 
 customers.
 
-## Mini Data Pipeline Project
+## Promotion Campaign Analysis
 
-This project includes a mini data pipeline designed to simulate a 
+This project includes marketing campaign analysis to evaluate the impact 
+of promotions on revenue performance.
+
+### Key Findings
+
+- Promotion campaigns generated higher overall revenue.
+- Average revenue per order increased during promotional campaigns.
+- Promotional activities can significantly improve sales performance.
+
+### Business Application
+
+This analysis can support marketing teams by:
+- Evaluating campaign effectiveness
+- Optimizing promotion strategies
+- Improving customer engagement and sales performance
+
+### Output
+
+- `reports/promotion_campaign_report.csv`
+
+## Mini Data Pipeline Project
+      
+This project includes a mini data pipeline designed to simulate a
 real-world data workflow.
 
 ### Pipeline Flow
@@ -130,3 +147,26 @@ Data Transformation
 SQLite Database
       ↓
 Summary Report
+
+## Mini Data Pipeline Project
+      
+This project includes a mini data pipeline designed to simulate a
+real-world data workflow.
+
+### Pipeline Flow
+
+```text
+CSV Data Source
+      ↓
+Python Extract
+      ↓
+Data Transformation
+      ↓
+SQLite Database
+      ↓
+Summary Report
+
+## How to Run
+```bash
+pip install pandas matplotlib
+python notebooks/sales_analysis.py
