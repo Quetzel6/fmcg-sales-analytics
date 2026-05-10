@@ -1,32 +1,60 @@
 # FMCG Sales Analytics Project
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Pandas](https://img.shields.io/badge/Pandas-DataAnalysis-green)
+![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)
+
+---
+
 ## Project Overview
-This project analyzes FMCG sales data to identify product performance, 
-regional trends, and the impact of promotions. The goal is to transform 
-raw sales data into actionable business insights.
+
+This project analyzes FMCG sales and customer data to identify product 
+performance, regional trends, customer behavior, and promotion impact.  
+The project also includes customer segmentation (RFM analysis), marketing 
+campaign analysis, and a mini ETL data pipeline to simulate real-world 
+business and data engineering workflows.
+
+The goal is to transform raw sales data into actionable business insights 
+and support data-driven decision-making.
+
+---
 
 ## Tools Used
+
 - Python
-- Pandas  
-- SQL (concept)
+- Pandas
+- SQLite
+- Git & GitHub
+- Tableau / Power BI (concept)
 - Data Analysis
+- ETL Workflow
+
+---
 
 ## Project Structure
+
+```text
 fmcg-sales-analytics/
 │
-├── data/ # raw dataset
-├── notebooks/ # analysis code
-├── dashboard/ # charts
-├── reports/ # business report
+├── data/                  # Raw dataset
+├── notebooks/             # Analysis scripts
+├── dashboard/             # Dashboard images
+├── reports/               # Generated reports
+├── src/                   # Data pipeline scripts
+├── sales.db               # SQLite database
 └── README.md
 
-## Dataset
+---
+
+ ## Dataset
 The dataset contains sales transactions including:
 - Product category and product name
 - Region (Bangkok, Chiang Mai, etc.)
 - Unit price and quantity
 - Promotion status
 - Customer type
+- Sales date
 
 ## Key Analysis
 
@@ -94,11 +122,11 @@ Frequency, Monetary) analysis.
 
 ### Key Findings
 
-- **VIP Customers** generate the highest revenue and have recent 
+- VIP Customers generate the highest revenue and have recent 
 purchases. These customers should be prioritized for retention strategies.
-- **Loyal Customers** are still active and should be encouraged with 
+- Loyal Customers are still active and should be encouraged with 
 loyalty programs.
-- **At Risk Customers** have not purchased recently and may churn if not 
+- At Risk Customers have not purchased recently and may churn if not 
 re-engaged.
 
 ### Business Recommendations
@@ -147,6 +175,7 @@ Data Transformation
 SQLite Database
       ↓
 Summary Report
+'''
 
 ## Mini Data Pipeline Project
       
@@ -167,6 +196,15 @@ SQLite Database
 Summary Report
 
 ## How to Run
-```bash
+```Install Dependencies
 pip install pandas matplotlib
+```Run Sales Analysis
 python notebooks/sales_analysis.py
+```Run RFM Analysis
+python notebooks/rfm_analysis.py
+```Run Promotion Analysis
+python notebooks/promotion_analysis.py
+```Run ETL Pipeline
+python src/data_pipeline.py
+
+
